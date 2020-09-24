@@ -3,7 +3,10 @@
   of the country list.
   ----------------------------
   Function takes following parameters:
-  1. country name: name of the country to be displayed
+  1. screenHeight: height of the screen
+  2. screenWidth: Width of the screen
+  3. country name: name of the country to be displayed
+  4. pressedFunction: function to call when button is pressed
 */
 
 import 'package:flutter/material.dart';

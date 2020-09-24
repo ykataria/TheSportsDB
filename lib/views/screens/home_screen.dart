@@ -1,6 +1,10 @@
+/*
+  
+*/
+
 import 'package:flutter/material.dart';
-import '../ui_components/countryComponent.dart';
-import '../screens/countryLeagues.dart';
+import '../ui_components/country_tile_component.dart';
+import 'country_leagues.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -8,6 +12,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  // list of the countries
   List<String> countryList = [
     "India",
     "United States",
@@ -17,6 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
     "Canada"
   ];
 
+  // function to load the league screen
   loadCountryLeague(String countryName) {
     Navigator.of(context)
         .push(MaterialPageRoute(builder: (context) => CountryLeagues(countryName)));
@@ -24,10 +30,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+
+    // Screen height and width
     final double _height = MediaQuery.of(context).size.height;
     final double _width = MediaQuery.of(context).size.width;
 
-    print("Height : $_height and width : $_width");
     return Scaffold(
       backgroundColor: Colors.red[900],
       body: SizedBox(
